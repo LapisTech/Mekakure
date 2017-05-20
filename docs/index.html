@@ -12,6 +12,8 @@ function init()
 	fetch( './mekakure.json?1' ).then( function( res ) { return res.json(); } ).then( function( data ) {
 		SetList( data );
 		DrawGraph( 'lr', data.chara.map( function( item ) { return item.hidden; } ), [ '', '左', '右', '左右' ] );
+		DrawGraph( 'lrw', data.chara.filter( function( item ) { return item.sex == 0; } ).map( function( item ) { return item.hidden; } ), [ '', '左', '右', '左右' ] );
+		DrawGraph( 'lrm', data.chara.filter( function( item ) { return item.sex == 1; } ).map( function( item ) { return item.hidden; } ), [ '', '左', '右', '左右' ] );
 		DrawGraph( 'style', data.chara.map( function( item ) { return item.style; } ), STYLE );
 	} );
 }
@@ -108,6 +110,22 @@ i.lrcloth { background-position: 100%, 0; }
 <h2>どちらの目を隠している？</h2>
 <canvas id="lr"></canvas>
 <table id="lrlist">
+<tr><td>項目</td><td>数</td><td>割合</td></tr>
+</table>
+</section>
+
+<section class="graph">
+<h2>どちらの目を隠している？(女性)</h2>
+<canvas id="lrw"></canvas>
+<table id="lrwlist">
+<tr><td>項目</td><td>数</td><td>割合</td></tr>
+</table>
+</section>
+
+<section class="graph">
+<h2>どちらの目を隠している？(男性)</h2>
+<canvas id="lrm"></canvas>
+<table id="lrmlist">
 <tr><td>項目</td><td>数</td><td>割合</td></tr>
 </table>
 </section>
