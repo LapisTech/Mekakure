@@ -13,7 +13,8 @@
 		{ "source": 9, "name": "ラム", "sex": 0, "hidden": 1, "style": "hair", "note": "" },
 		{ "source": 10, "name": "スーシィ・マンババラン", "sex": 0, "hidden": 1, "style": "hair", "note": "" },
 		{ "source": 1, "name": "天龍", "sex": 0, "hidden": 1, "style": "eyepatch", "note": "" },
-		{ "source": 1, "name": "木曾", "sex": 0, "hidden": 2, "style": "eyepatch", "note": "" }
+		{ "source": 1, "name": "木曾", "sex": 0, "hidden": 2, "style": "eyepatch", "note": "" },
+		{ "source": 5, "name": "9S", "sex": 1, "hidden": 3, "style": "cloth", "note": "" }
 	],
 	"source": [
 		{ "title": "ゲゲゲの鬼太郎", "site": "http://www.toei-anim.co.jp/tv/kitaro/" },
