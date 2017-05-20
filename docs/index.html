@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Mekakure</title>
+<script type="text/javascript">
+var SEX = [ '女', '男' ];
+var STYLE = { hair: '髪', eyepatch: '眼帯', cloth: '布' };
+var COLOR = [ '#ffdddd', '#ddffdd', '#ddddff' ];
+function init()
+{
+	fetch( 'mekakure.json' ).then( ( data ) => {
+		SetList( data );
+		DrawGraph( 'lr', data.chara.map( function( item ) { return item.hidden; } ), [ '', '左', '右', '左右' ] );
+		DrawGraph( 'style', data.chara.map( function( item ) { return item.style; } ), STYLE );
+	} );
+}
+function CreateCell( data )
+{
+	var cell = document.createElement( 'td' );
+	cell.innerHTML = data;
+	return cell;
+}
+function IconType( data )
+{
+	var prefix = [ '', 'l', 'r', 'lr' ];
+	return prefix[ data.hidden ] + data.style;
+}
+function AddRow( data, source )
+{
+	var row = document.createElement( 'tr' );
+	row.appendChild( CreateCell('<i class="' + IconType( data ) + '"></i>' ) );
+	row.appendChild( CreateCell( data.name ) );
+	row.appendChild( CreateCell( '<a href="' + source[ data.source ].site + '" target="_blank">' + source[ data.source ].title + '</a>' ) );
+	row.appendChild( CreateCell( SEX[ data.sex ] ) );
+	row.appendChild( CreateCell( (data.hidden & 1 ? '左' : '') + (data.hidden & 2 ? '右' : '') ) );
+	row.appendChild( CreateCell( STYLE[ data.style ] || 'その他' ) );
+	return row;
+}
+function SetList( data )
+{
+	var table = document.getElementById( 'list' );
+	data.chara.forEach( function( item ) { table.appendChild( AddRow( item, data.source ) ); } );
+}
+function AddValueRow( name, num, max, color )
+{
+	var row = document.createElement( 'tr' );
+	row.style.backgroundColor = color;
+	row.appendChild( CreateCell( name ) );
+	row.appendChild( CreateCell( num ) );
+	row.appendChild( CreateCell( ( num / max  * 100 ).toFixed( 2 ) + '%' ) );
+	return row;
+}
+function DrawGraph( id, data, name )
+{
+	var canvas = document.getElementById( id );
+	var table = document.getElementById( id + 'list' );
+	canvas.width = canvas.clientWidth;
+	canvas.height = canvas.clientHeight
+	var r = ( canvas.width < canvas.height ? canvas.width : canvas.height ) / 2;
+	var cx = canvas.width / 2;
+	var cy = canvas.height / 2;
+	var ctx = canvas.getContext( '2d' );
+
+	var vals = {};
+	data.forEach( function( item ) { if ( vals[ item ] === undefined ) { vals[ item ] = 1; } else { ++vals[ item ]; } } );
+
+	var list = Object.keys( vals );
+	list.sort( function( a, b ) { return vals[ b ] - vals[ a ]; } );
+
+	var total = -Math.PI / 2;
+	list.forEach( function( key, index )
+	{
+		var rad = Math.PI * 2 * vals[ key ] / data.length;
+		ctx.beginPath();
+		ctx.moveTo( cx, cy );
+		ctx.arc( cx, cy, r, total, total + rad, false );
+		ctx.closePath();
+		ctx.fillStyle = COLOR[ index ];
+		ctx.fill();
+		total += rad;
+		table.appendChild( AddValueRow( name[ key ], vals[ key ], data.length, COLOR[ index ] ) );
+	} );
+}
+document.addEventListener('DOMContentLoaded',init,false);
+</script>
+<style type="text/css">
+h1, h2 { text-align: center; }
+section { clear: both; margin: 40px auto; overflow: auto; width: 700px; }
+section.graph { width: 400px;}
+canvas { width: 200px; height: 200px; float: left; margin: 0 20px;}
+table{ border-collapse: collapse; }
+td { padding: 2px 4px; }
+td > i { display: block; background-image: url( 'style.png' ); background-size: cover; background-repeat: no-repeat; width: 20px; height: 20px; }
+i.lhair { background-position: 0, 0; }
+i.rhair { background-position: 25%, 0; }
+i.leyepatch { background-position: 50%, 0; }
+i.reyepatch { background-position: 75%, 0; }
+i.lrcloth { background-position: 100%, 0; }
+</style>
+</head>
+<body>
+
+<h1>Mekakure</h1>
+<p style="text-align:center;">～右目と左目、どちらを隠すキャラが多いの？～</p>
+
+<section class="graph">
+<h2>どちらの目を隠している？</h2>
+<canvas id="lr"></canvas>
+<table id="lrlist">
+<tr><td>項目</td><td>数</td><td>割合</td></tr>
+</table>
+</section>
+
+<section class="graph">
+<h2>何で目を隠している？</h2>
+<canvas id="style"></canvas>
+<table id="stylelist">
+<tr><td>項目</td><td>数</td><td>割合</td></tr>
+</table>
+</section>
+
+<section>
+<h2>キャラ一覧</h2>
+<table id="list">
+<tr><td></td><td>名前</td><td>出典</td><td>性別</td><td>隠す目</td><td>隠し方</td></tr>
+</table>
+</section>
+
+<section>
+<h2>キャラ追加について</h2>
+<p>一応以下の基準で追加しようと思っています。</p>
+<ul>
+	<li>出典がWikipediaに乗っている。</li>
+</ul>
+<p>Wikipediaに載るくらいの作品なら画像検索してもちゃんと出るだろうという目論見です（画像確認してからデータ追加するので）。</p>
+<p>追加要望は<a href="https://github.com/LapisTech/Mekakure/issues">Issue</a>なり作者になり連絡してもらえれば、適当に追加します。って言うかください。</p>
+<p>その際出典は明記してください。お願いします。</p>
+</section>
+
+</body>
+</html>

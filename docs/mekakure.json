@@ -1,0 +1,24 @@
+{
+	"chara": [
+		{ "source": 0, "name": "鬼太郎", "sex": 1, "hidden": 1, "style": "hair", "note": "" },
+		{ "source": 1, "name": "浜風", "sex": 0, "hidden": 2, "style": "hair", "note": "" },
+		{ "source": 2, "name": "ギンコ", "sex": 1, "hidden": 1, "style": "hair", "note": "" },
+		{ "source": 3, "name": "マシュ・キリエライト", "sex": 0, "hidden": 2, "style": "hair", "note": "" },
+		{ "source": 4, "name": "ペルソナ3男主人公", "sex": 1, "hidden": 2, "style": "hair", "note": "" },
+		{ "source": 5, "name": "2B", "sex": 0, "hidden": 3, "style": "cloth", "note": "" },
+		{ "source": 6, "name": "めぐみん", "sex": 0, "hidden": 1, "style": "eyepatch", "note": "普通に外すこと多し。" },
+		{ "source": 7, "name": "迅雷", "sex": 0, "hidden": 2, "style": "eyepatch", "note": "" },
+		{ "source": 8, "name": "小梅", "sex": 0, "hidden": 2, "style": "hair", "note": "" }
+	],
+	"source": [
+		{ "title": "ゲゲゲの鬼太郎", "site": "http://www.toei-anim.co.jp/tv/kitaro/" },
+		{ "title": "艦隊これくしょん-艦これ-", "site": "http://www.dmm.com/netgame/feature/kancolle.html" },
+		{ "title": "蟲師", "site": "http://www.mushishi-anime.com/" },
+		{ "title": "Fate/Grand Order", "site": "https://www.fate-go.jp/" },
+		{ "title": "ペルソナ3", "site": "http://p3.atlus.co.jp/" },
+		{ "title": "NieR:Automata", "site": "http://www.jp.square-enix.com/nierautomata/" },
+		{ "title": "この素晴らしい世界に祝福を！", "site": "http://konosuba.com/" },
+		{ "title": "FRAME ARMS GIRL", "site": "http://www.kotobukiya.co.jp/product-title/framearmsgirl/" },
+		{ "title": "アイドルマスターシンデレラガールズ", "site": "http://www.mbga.jp/_game_intro?game_id=12008305" }
+	]
+}
