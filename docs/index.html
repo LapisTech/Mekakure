@@ -9,7 +9,7 @@ var STYLE = { hair: '髪', eyepatch: '眼帯', cloth: '布' };
 var COLOR = [ '#ffdddd', '#ddffdd', '#ddddff' ];
 function init()
 {
-	fetch( 'mekakure.json' ).then( ( data ) => {
+	fetch( 'mekakure.json' ).then( function( res ) { return res.json(); } ).then( ( data ) => {
 		SetList( data );
 		DrawGraph( 'lr', data.chara.map( function( item ) { return item.hidden; } ), [ '', '左', '右', '左右' ] );
 		DrawGraph( 'style', data.chara.map( function( item ) { return item.style; } ), STYLE );
