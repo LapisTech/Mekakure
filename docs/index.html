@@ -9,7 +9,7 @@ var STYLE = { hair: '髪', eyepatch: '眼帯', cloth: '布' };
 var COLOR = [ '#ffdddd', '#ddffdd', '#ddddff' ];
 function init()
 {
-	fetch( './mekakure.json?2' ).then( function( res ) { return res.json(); } ).then( function( data ) {
+	fetch( './mekakure.json?3' ).then( function( res ) { return res.json(); } ).then( function( data ) {
 		SetList( data );
 		DrawGraph( 'lr', data.chara.map( function( item ) { return item.hidden; } ), [ '', '左', '右', '左右' ] );
 		DrawGraph( 'lrw', data.chara.filter( function( item ) { return item.sex == 0; } ).map( function( item ) { return item.hidden; } ), [ '', '左', '右', '左右' ] );
