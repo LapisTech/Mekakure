@@ -14,7 +14,9 @@
 		{ "source": 10, "name": "スーシィ・マンババラン", "sex": 0, "hidden": 1, "style": "hair", "note": "" },
 		{ "source": 1, "name": "天龍", "sex": 0, "hidden": 1, "style": "eyepatch", "note": "" },
 		{ "source": 1, "name": "木曾", "sex": 0, "hidden": 2, "style": "eyepatch", "note": "" },
-		{ "source": 5, "name": "9S", "sex": 1, "hidden": 3, "style": "cloth", "note": "" }
+		{ "source": 5, "name": "9S", "sex": 1, "hidden": 3, "style": "cloth", "note": "" },
+		{ "source": 11, "name": "霧嶋 董香", "sex": 0, "hidden": 2, "style": "hair", "note": "" },
+		{ "source": 12, "name": "時崎 狂三", "sex": 0, "hidden": 1, "style": "hair", "note": "平常時" }
 	],
 	"source": [
 		{ "title": "ゲゲゲの鬼太郎", "site": "http://www.toei-anim.co.jp/tv/kitaro/" },
@@ -27,6 +29,8 @@
 		{ "title": "FRAME ARMS GIRL", "site": "http://www.kotobukiya.co.jp/product-title/framearmsgirl/" },
 		{ "title": "アイドルマスターシンデレラガールズ", "site": "http://www.mbga.jp/_game_intro?game_id=12008305" },
 		{ "title": "Re:ゼロから始める異世界生活", "site": "http://re-zero-anime.jp/" },
-		{ "title": "リトルウィッチアカデミア", "site": "http://tv.littlewitchacademia.jp/" }
+		{ "title": "リトルウィッチアカデミア", "site": "http://tv.littlewitchacademia.jp/" },
+		{ "title": "東京喰種", "site": "http://youngjump.jp/tokyoghoul/" },
+		{ "title": "デート・ア・ライブ", "site": "http://date-a-live-anime.com/" }
 	]
 }
