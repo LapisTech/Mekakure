@@ -9,7 +9,7 @@ var STYLE = { hair: '髪', eyepatch: '眼帯', cloth: '布' };
 var COLOR = [ '#ffdddd', '#ddffdd', '#ddddff' ];
 function init()
 {
-	fetch( './mekakure.json?3' ).then( function( res ) { return res.json(); } ).then( function( data ) {
+	fetch( './mekakure.json?4' ).then( function( res ) { return res.json(); } ).then( function( data ) {
 		SetList( data );
 		DrawGraph( 'lr', data.chara.map( function( item ) { return item.hidden; } ), [ '', '左', '右', '左右' ] );
 		DrawGraph( 'lrw', data.chara.filter( function( item ) { return item.sex == 0; } ).map( function( item ) { return item.hidden; } ), [ '', '左', '右', '左右' ] );
@@ -149,7 +149,7 @@ i.lrcloth { background-position: 100%, 0; }
 <h2>キャラ追加について</h2>
 <p>一応以下の基準で追加しようと思っています。</p>
 <ul>
-	<li>出典がWikipediaに乗っている。</li>
+	<li>出典がWikipediaに載っている。</li>
 </ul>
 <p>Wikipediaに載るくらいの作品なら画像検索してもちゃんと出るだろうという目論見です（画像確認してからデータ追加するので）。</p>
 <p>追加要望は<a href="https://github.com/LapisTech/Mekakure/issues">Issue</a>なり作者になり連絡してもらえれば、適当に追加します。って言うかください。</p>
