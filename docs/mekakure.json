@@ -24,8 +24,11 @@
 		{ "source": 17, "name": "ビッグ・ボス", "sex": 1, "hidden": 2, "style": "eyepatch", "note": "" },
 		{ "source": 18, "name": "エレーナ・アルシャヴィナ", "sex": 0, "hidden": 2, "style": "hair", "note": "" },
 		{ "source": 19, "name": "綾辻 絢瀬", "sex": 0, "hidden": 2, "style": "hair", "note": "" },
-		{ "source": 19, "name": "貴徳原 カナタ", "sex": 0, "hidden": 3, "style": "hat", "note": "" }
-		
+		{ "source": 19, "name": "貴徳原 カナタ", "sex": 0, "hidden": 3, "style": "hat", "note": "" },
+		{ "source": 20, "name": "デキム", "sex": 1, "hidden": 2, "style": "hair", "note": "" },
+		{ "source": 21, "name": "佐藤 潤", "sex": 1, "hidden": 1, "style": "hair", "note": "" },
+		{ "source": 21, "name": "小鳥遊 泉", "sex": 0, "hidden": 1, "style": "hair", "note": "" },
+		{ "source": 21, "name": "小鳥遊 静", "sex": 0, "hidden": 1, "style": "hair", "note": "" }
 	],
 	"source": [
 		{ "title": "ゲゲゲの鬼太郎", "site": "http://www.toei-anim.co.jp/tv/kitaro/" },
@@ -47,7 +50,8 @@
 		{ "title": "ご注文はうさぎですか？", "site": "http://www.gochiusa.com/" },
 		{ "title": "METAL GEAR SOLID", "site": "http://www.konami.jp/kojima_pro/hd/mgs/" },
 		{ "title": "聖剣使いの禁呪詠唱", "site": "http://warubure-anime.com/" },
-		{ "title": "落第騎士の英雄譚", "site": "http://www.ittoshura.com/" }
-		
+		{ "title": "落第騎士の英雄譚", "site": "http://www.ittoshura.com/" },
+		{ "title": "デス・パレード", "site": "http://www.vap.co.jp/deathparade/" },
+		{ "title": "WORKING!", "site": "http://www.wagnaria.com/" }
 	]
 }
