@@ -19,7 +19,13 @@
 		{ "source": 12, "name": "時崎 狂三", "sex": 0, "hidden": 1, "style": "hair", "note": "平常時" },
 		{ "source": 13, "name": "ムガロ", "sex": 0, "hidden": 1, "style": "hair", "note": "" },
 		{ "source": 14, "name": "オイゲン", "sex": 1, "hidden": 1, "style": "eyepatch", "note": "" },
-		{ "source": 15, "name": "ファフニール", "sex": 1, "hidden": 2, "style": "hair", "note": "" }
+		{ "source": 15, "name": "ファフニール", "sex": 1, "hidden": 2, "style": "hair", "note": "" },
+		{ "source": 16, "name": "リゼの父", "sex": 1, "hidden": 1, "style": "eyepatch", "note": "" },
+		{ "source": 17, "name": "ビッグ・ボス", "sex": 1, "hidden": 2, "style": "eyepatch", "note": "" },
+		{ "source": 18, "name": "エレーナ・アルシャヴィナ", "sex": 0, "hidden": 2, "style": "hair", "note": "" },
+		{ "source": 19, "name": "綾辻 絢瀬", "sex": 0, "hidden": 2, "style": "hair", "note": "" },
+		{ "source": 19, "name": "貴徳原 カナタ", "sex": 0, "hidden": 3, "style": "hat", "note": "" }
+		
 	],
 	"source": [
 		{ "title": "ゲゲゲの鬼太郎", "site": "http://www.toei-anim.co.jp/tv/kitaro/" },
@@ -37,6 +43,11 @@
 		{ "title": "デート・ア・ライブ", "site": "http://date-a-live-anime.com/" },
 		{ "title": "神撃のバハムート VIRGIN SOUL", "site": "https://shingekinobahamut-virginsoul.jp/" },
 		{ "title": "グランブルーファンタジー", "site": "http://granbluefantasy.jp/" },
-		{ "title": "小林さんちのメイドラゴン", "site": "http://maidragon.jp/" }
+		{ "title": "小林さんちのメイドラゴン", "site": "http://maidragon.jp/" },
+		{ "title": "ご注文はうさぎですか？", "site": "http://www.gochiusa.com/" },
+		{ "title": "METAL GEAR SOLID", "site": "http://www.konami.jp/kojima_pro/hd/mgs/" },
+		{ "title": "聖剣使いの禁呪詠唱", "site": "http://warubure-anime.com/" },
+		{ "title": "落第騎士の英雄譚", "site": "http://www.ittoshura.com/" }
+		
 	]
 }
